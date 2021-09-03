@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành OPP, bài 1</title>
+</head>
+<body>
+<h1>Xây dựng lớp Date theo mẫu:</h1>
+<script>
+    // let myDate = function (day, month, year) {
+    //     this.day = day;
+    //     this.month = month;
+    //     this.year = year;
+    //
+    // this.getDay = function () {
+    //     return this.day;
+    // }
+    // this.getMonth = function () {
+    //     return this.month;
+    // }
+    // this.getYear = function () {
+    //     return this.year;
+    // }
+    // this.setDay = function () {
+    //     this.day = day;
+    // }
+    // this.setMonth = function () {
+    //     this.month = month;
+    // }
+    // this.setYear = function () {
+    //     this.year = year;
+    // }
+    // };
+    // let date = new myDate(31, 1, 2021);
+    // let day = date.getDay();
+    // let month = date.getMonth();
+    // let year = date.getYear();
+    // alert(day + "/" + month + "/" + year);
+    // date.setDay(10);
+    // date.setMonth(10);
+    // date.setYear(2019);
+    // alert(day + "/" + month + "/" + year);
+    class myDate {
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+        getDay() {
+            return this.day;
+        }
+        getMonth() {
+            return this.month;
+        }
+        getYear() {
+            return this.year;
+        }
+        drawCanvas(){
+            let c= document.getElementById("myCanvas");
+            let ctx = c.getContext("2d");
+            ctx.rect();
+            ctx.fillStyle="#10523b";
+            ctx.fillRect(10, 10, this.width, this.height);
+            ctx.fill();
+        }
+    }
+
+    let date = new myDate(1, 9, 2021);
+    let day =  date.getDay();
+    let month = date.getMonth();
+    let year = date.getYear();
+    alert(day + "/" + month + "/" + year);
+    date.day = 5;
+    alert(date.day)
+</script>
+</body>
+</html>

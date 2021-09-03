@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App HDPhone</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Phone1</td>
+        <td id="battery1">100%</td>
+        <td>Phone 2</td>
+        <td id="battery2">100%</td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input id="mes1" type="text">
+            <button onclick="sendMessageToPhone2()">Send</button>
+        </td>
+        <td colspan="2">
+            <input id="mes2" type="text">
+            <button onclick="sendMessageToPhone1()">Send</button>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" id="inboxPhone1">Inboxphone1</td>
+        <td colspan="2" id="inboxPhone2">Inboxphone1</td>
+    </tr>
+</table>
+<script src="HDPhone.js"></script>
+</body>
+</html>

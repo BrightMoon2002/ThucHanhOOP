@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành OOP, bài tập 4</title>
+</head>
+<body>
+<h1>Xây dựng lớp mô tả hình chữ nhật:</h1>
+<canvas id="myCanvas" width="368px" height="468px" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+        getWidth() {
+            return this.width;
+        }
+        getHeight() {
+            return this.height;
+        }
+        getArea() {
+            return this.width * this.height;
+        }
+
+        getPerimeter() {
+            return (this.width + this.height) * 2;
+        }
+
+        drawCanvas() {
+            let c = document.getElementById("myCanvas");
+            let ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.fillStyle = "#bf1e1e";
+            ctx.fillRect(100, 50, this.width, this.height);
+            ctx.fill();
+        }
+    }
+    let width = parseInt(prompt("Enter width"));
+    let height = parseInt(prompt("Enter height"));
+    let newRectangle = new Rectangle(width, height);
+    let area = newRectangle.getArea();
+    let perimeter = newRectangle.getPerimeter()
+    alert("Area is: " + area);
+    alert("Perimeter is: " + perimeter);
+   let w = newRectangle.getWidth();
+   let h = newRectangle.getHeight();
+   newRectangle.w = 30;
+   newRectangle.h = 50;
+   alert(newRectangle.h);
+    newRectangle.drawCanvas();
+</script>
+</body>
+</html>

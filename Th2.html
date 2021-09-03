@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành OPP, bài 2</title>
+</head>
+<body>
+<script>
+    // let Circle = function(radius) {
+    //
+    //     this.radius = radius;
+    //     this.getArea = function() {
+    //         return Math.PI * radius * radius;
+    //         let circle = new Circle(2);
+    //         let radius = circle.getRadius(2); // 2
+    //
+    //         let area = circle.getArea(12); // 12.566370614359172
+    //         alert("radius: " + radius + "; area: " + area);
+    //     }
+    // };
+    // Cách2:
+    class Circle {
+        constructor(radius, color) {
+            this.radius = radius;
+            this.color = color;
+        }
+        getRadius() {
+            return this.radius;
+        }
+        getArea() {
+            return this.radius * this.radius * Math.PI;
+        }
+    }
+
+    let newCircle = new Circle(3)
+    let area = newCircle.getArea();
+    let radius = newCircle.getRadius();
+    newCircle.radius = 4
+    alert(newCircle.radius)
+    document.write(area)
+</script>
+</body>
+</html>

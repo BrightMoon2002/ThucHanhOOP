@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành OOP, bài tập 5</title>
+</head>
+<body>
+<h1>Xây dựng mảng temperature:</h1>
+<script>
+    class Temparature {
+        constructor(Celsius, Fahrenheit) {
+            this.Celsius = Celsius;
+            this.Fahrenheit = Fahrenheit;
+        }
+
+        getCelsius() {
+            return this.Celsius
+        }
+        getFahrenheit() {
+            return this.Fahrenheit;
+        }
+        changeCelsius() {
+            return (this.Fahrenheit - 32) / 1.8;
+        }
+        changeFahrenheit() {
+            return this.Celsius * 9  / 5 + 32;
+        }
+    }
+    let F = parseFloat(prompt("Enter the F"))
+    let newTemparature = new Temparature(25, F);
+    let celsius = newTemparature.getCelsius();
+    let fahrenheit = newTemparature.getFahrenheit();
+    let changeC = newTemparature.changeCelsius();
+    let changeF = newTemparature.changeFahrenheit();
+    alert("độ F là:" + changeF + " Độ C là: " + changeC);
+
+</script>
+</body>
+</html>
